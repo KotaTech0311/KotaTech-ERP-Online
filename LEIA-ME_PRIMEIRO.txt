@@ -1,0 +1,54 @@
+KOTATECH ERP - VERSÃO LIMPA E CORRIGIDA
+=======================================
+
+CORREÇÕES DESTA VERSÃO
+======================
+- Login usa senha simples.
+- Criar usuário salva senha simples.
+- Removido bcrypt do login e da criação de usuários.
+- Corrigido erro de build da Vercel com useEffect.
+- Corrigido Electron: electron fica apenas em devDependencies.
+- Removidos arquivos .bat desnecessários.
+
+ARQUIVOS .BAT MANTIDOS
+======================
+1. INSTALAR_TUDO.bat
+2. RODAR_WEB_LOCAL.bat
+3. RODAR_DESKTOP.bat
+4. GERAR_EXE_DESKTOP.bat
+
+LOGIN INICIAL
+=============
+Usuário: admin
+Senha: admin123
+
+SUPABASE
+========
+Execute no SQL Editor:
+supabase/EXECUTAR_TUDO.sql
+
+Se já executou antes, pode executar novamente. Ele atualiza o admin para senha simples admin123.
+
+VERCEL
+======
+Configure:
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+SUPABASE_SERVICE_ROLE_KEY
+
+DESKTOP
+=======
+Configure desktop/config.json com a URL real da Vercel.
+Depois use:
+RODAR_DESKTOP.bat
+
+Para gerar EXE:
+GERAR_EXE_DESKTOP.bat
+
+NÃO ENVIAR AO GITHUB
+====================
+node_modules
+.next
+desktop/node_modules
+desktop/dist
+.env.local
